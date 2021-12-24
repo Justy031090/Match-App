@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    width: 80vh;
+    height: 80vh;
+}
+button {
+    background-color: transparent;
+    cursor: pointer;
+}
+.counters {
+    display: flex;
+    justify-content: space-around;
+}
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin: 0.75rem;
+}
+.image-container {
+    width: 80vh;
+    height: 80vh;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+    box-sizing: border-box;
+    background: url('/src/assets/background.jpg');
+    background-size: cover;
+    text-align: center;
+    color: crimson;
+}
+.fa-close {
+    font-size: 1.5rem;
+    color: red;
+}
+.fa-check {
+    font-size: 1.5rem;
+    color: green;
+}
+.fa-thumbs-up {
+    color: green;
+}
+.fa-thumbs-down {
+    color: red;
+}
+.like,
+.dislike {
+    font-size: 1.5rem;
+}
