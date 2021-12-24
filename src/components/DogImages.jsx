@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import dogsApi from '../api/dogsApi';
 import './dog-image.css';
-import dogLoveImage from '../assets/Dog-Love.jpg';
+import dogLoveImage from '../assets/Dog-Love2.jpg';
 
 export class DogImages extends Component {
     state = {
@@ -32,8 +32,10 @@ export class DogImages extends Component {
                 this.setState({
                     dogUrl: (
                         <div>
-                            <img src={dogLoveImage} alt="" />
-                            <span>I love you too !</span>
+                            <img
+                                src={dogLoveImage}
+                                alt="Something Gone Wrong"
+                            />
                         </div>
                     ),
                 });
@@ -49,12 +51,13 @@ export class DogImages extends Component {
     };
     likeHandle = () => {
         this.renderCard();
-        this.setState({ like: this.state.like + 1, loading: false });
+        if (this.state.like < 10)
+            this.setState({ like: this.state.like + 1, loading: false });
     };
     dislikeHandle = () => {
-        this.setState({ loading: true });
         this.renderCard();
-        this.setState({ dislike: this.state.dislike + 1, loading: false });
+        if (this.state.dislike < 10)
+            this.setState({ dislike: this.state.dislike + 1, loading: false });
     };
     render() {
         return (
